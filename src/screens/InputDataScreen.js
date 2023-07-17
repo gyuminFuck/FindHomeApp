@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
@@ -8,9 +8,9 @@ import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import NativeSelect from "@mui/material/NativeSelect";
 //import axios from "axios";
-import emailjs from "@emailjs/browser";
+
 import firestore from "../firebase";
-import AlretScreen from "./AlretScreen";
+
 const defaultValues = {
   title: "",
   address: "",
@@ -48,9 +48,8 @@ function InputDataScreen() {
 
   const handleSave = () => {
     if (window.confirm("중도퇴실 정보를 접수하시겠습니까?")) {
-      console.log("formData: ", formData);
-      //user.add(formData);
-      //handleReset();
+      //console.log("formData: ", formData);
+      user.add(formData);
 
       setFormData(defaultValues);
 
@@ -67,7 +66,9 @@ function InputDataScreen() {
       } catch (e) {
         console.e("error adding document : ", e);
       }
-      window.alert("중토퇴실 정보 전송완료!");
+      window.alert(
+        "정보를 접수하셨습니다! 확인하는대로 바로 연락드리겠습니다! 접수해주셔서 감사합니다."
+      );
     } else {
       setFormData(defaultValues);
     }
@@ -75,7 +76,7 @@ function InputDataScreen() {
     //axios.post("http://localhost:8080/test")
   };
   const handleReset = () => {
-    if (window.confirm("알 유 초기화??")) setFormData(defaultValues);
+    if (window.confirm("정보를 초기화 하시겠어요?")) setFormData(defaultValues);
   };
 
   /* Render */
@@ -94,7 +95,7 @@ function InputDataScreen() {
             id="outlined-basic"
             label="건물명"
             variant="outlined"
-            fullWidth="true"
+            fullWidth={true}
             name="title"
             value={formData.title}
             onChange={handleChange}
@@ -106,7 +107,7 @@ function InputDataScreen() {
             id="outlined-basic"
             label="주소"
             variant="outlined"
-            fullWidth="true"
+            fullWidth={true}
             name="address"
             value={formData.address}
             onChange={handleChange}
@@ -118,7 +119,7 @@ function InputDataScreen() {
             id="outlined-basic"
             label="이름"
             variant="outlined"
-            fullWidth="true"
+            fullWidth={true}
             name="name"
             value={formData.name}
             onChange={handleChange}
@@ -130,7 +131,7 @@ function InputDataScreen() {
             id="outlined-basic"
             label="전화번호"
             variant="outlined"
-            fullWidth="true"
+            fullWidth={true}
             name="contact"
             value={formData.contact}
             onChange={handleChange}
@@ -149,7 +150,6 @@ function InputDataScreen() {
               }}
               value={formData.tradeOption}
               onChange={handleChange}
-              defaultValue="월세"
             >
               <option value={"월세"}>월세</option>
               <option value={"전세"}>전세</option>
@@ -162,7 +162,7 @@ function InputDataScreen() {
             id="outlined-basic"
             label="보증금"
             variant="outlined"
-            fullWidth="true"
+            fullWidth={true}
             name="deposit"
             value={formData.deposit}
             onChange={handleChange}
@@ -174,7 +174,7 @@ function InputDataScreen() {
             id="outlined-basic"
             label="차임"
             variant="outlined"
-            fullWidth="true"
+            fullWidth={true}
             name="fee"
             value={formData.fee}
             onChange={handleChange}
@@ -186,7 +186,7 @@ function InputDataScreen() {
             id="outlined-multiline-static"
             label="퇴실사유"
             variant="outlined"
-            fullWidth="true"
+            fullWidth={true}
             name="reason"
             value={formData.reason}
             onChange={handleChange}

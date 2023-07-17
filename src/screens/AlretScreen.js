@@ -3,7 +3,7 @@ import Alert from "@mui/material/Alert";
 
 import Container from "@mui/material/Container";
 
-function AlretScreen(props) {
+function AlretScreen() {
   if (props.msg == "error") {
     return (
       <Container>
