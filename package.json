@@ -25,6 +25,7 @@
     "predeploy": "CI = npm run build",
     "deploy": "gh-pages -d build"
   },
+  "homepage": "https://trello-fo.netlify.app/",
   "eslintConfig": {
     "extends": [
       "react-app",
