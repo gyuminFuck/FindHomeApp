@@ -50,7 +50,6 @@ function InputDataScreen() {
     if (window.confirm("중도퇴실 정보를 접수하시겠습니까?")) {
       //console.log("formData: ", formData);
       user.add(formData);
-
       setFormData(defaultValues);
 
       // user.get().then((docs) => {
@@ -67,7 +66,7 @@ function InputDataScreen() {
         console.e("error adding document : ", e);
       }
       window.alert(
-        "정보를 접수하셨습니다! 확인하는대로 바로 연락드리겠습니다! 접수해주셔서 감사합니다."
+        "정보 접수 완료했습니다! 확인하는대로 바로 연락드리겠습니다! 접수해주셔서 감사합니다."
       );
     } else {
       setFormData(defaultValues);
