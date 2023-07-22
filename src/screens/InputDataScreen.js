@@ -108,7 +108,8 @@ function InputDataScreen() {
           </Typography>
           <br />
           <Typography variant="subtitle1" color={"black"} sx={{}}>
-            고객과의 신뢰구축을 소중하게 생각하는 ' 도하부동산 ' 오늘도 최선을
+            고객과의 신뢰구축을 소중하게 생각하는{" "}
+            <Typography variant="h6">' 도하부동산 '</Typography> 오늘도 최선을
             다하고 있습니다.
           </Typography>
 
