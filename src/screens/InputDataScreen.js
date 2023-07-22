@@ -106,14 +106,14 @@ function InputDataScreen() {
           <Typography component="h2" variant="h4" color={"black"} sx={{}}>
             온라인 중도퇴실 신청
           </Typography>
-
+          <br />
           <Typography variant="subtitle1" color={"black"} sx={{}}>
-            전문적역량을 바탕으로 고객과의 신뢰구축을 소중하게 생각하는
-            도하부동산 오늘도 최선을 다하고 있습니다.
+            고객과의 신뢰구축을 소중하게 생각하는 ' 도하부동산 ' 오늘도 최선을
+            다하고 있습니다.
           </Typography>
 
           <Typography variant="subtitle1" color={"black"} sx={{}}>
-            중도퇴실 정보 신청해 주시면 빠르시간내에 답변드리겠습니다.
+            중도퇴실 신청 주시면 빠른 검토 후 답변드리겠습니다.
           </Typography>
           <Box sx={{ alignItems: "center" }}>
             <Typography variant="subtitle1" color={"black"}>
@@ -129,10 +129,11 @@ function InputDataScreen() {
           </Box>
         </Grid>
       </Grid>
+
       <Container maxWidth="sm">
         <Grid container spacing={1}>
           <Grid item xs={12}></Grid>
-
+          <br />
           <Grid item xs={12}>
             <TextField
               id="outlined-basic"
