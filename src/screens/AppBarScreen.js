@@ -12,7 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import Chip from "@mui/material/Chip";
+import Grid from "@mui/material/Grid";
 import PhoneIcon from "@mui/icons-material/Phone";
 
 const pages = ["Home", "Blog"];
@@ -71,7 +71,6 @@ function AppBarScreen() {
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
@@ -112,7 +111,13 @@ function AppBarScreen() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Button
+                    textAlign="center"
+                    target="_blank"
+                    href="https://blog.naver.com/bakgumi"
+                  >
+                    {page}
+                  </Button>
                 </MenuItem>
               ))}
             </Menu>
@@ -163,17 +168,23 @@ function AppBarScreen() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
+            <Tooltip title="Open settings" sx={{ marginRight: "20px" }}>
+              <Typography
+                variant="subtitle1"
+                sx={{
+                  display: { xs: "none", md: "flex" },
+                }}
+                style={{ float: "Left" }}
+              >
+                <PhoneIcon
+                  sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+                />
+                051-623-0709
+              </Typography>
+
               {/* <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="%PUBLIC_URL%/myFace.png" />
               </IconButton> */}
-              <a>
-                <PhoneIcon
-                  sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
-                  style={{ float: "left" }}
-                />
-                051-623-0709
-              </a>
             </Tooltip>
             <Menu
               sx={{ mt: "45px" }}
