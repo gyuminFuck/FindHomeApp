@@ -428,8 +428,8 @@ function InputDataScreen() {
               </Grid>
               <br />
               <Grid>
-                <Typography variant="subtitle1" color={"black"}>
-                  주소 : 부산광역시 남구 유엔로157번길 67 3층, 도하부동산 &nbsp;
+                <Typography variant="subtitle1" color={"black"} align="left">
+                  주소 : 부산광역시 남구 유엔로157번길 67 3층 &nbsp;
                   사업자등록번호 : 605-40-96326
                 </Typography>
               </Grid>
@@ -460,7 +460,7 @@ function InputDataScreen() {
                 상담문의 : 051.623.0709 (24시)
               </Typography>
             </Grid>
-            <br />
+
             <Grid>
               <Typography variant="subtitle1" color={"black"}>
                 © 도하부동산. All right Reserved.
